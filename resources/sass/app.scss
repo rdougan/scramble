@@ -1,0 +1,219 @@
+$include-pictos-font: false;
+
+@import 'sencha-touch/base';
+
+// Fonts
+@include font-face('gramble', inline-font-files('gramble-webfont.svg', svg));
+
+// Icons
+@include icon-font('icomoon', inline-font-files('icomoon.woff', woff, 'icomoon.ttf', truetype, 'icomoon.svg', svg));
+
+@include icon('home', 'h', 'icomoon');
+@include icon('starlist', 's', 'icomoon');
+@include icon('featured', 'l', 'icomoon');
+@include icon('friends', 'f', 'icomoon');
+@include icon('games', 'g', 'icomoon');
+@include icon('charities', 'c', 'icomoon');
+@include icon('developers', 'd', 'icomoon');
+@include icon('search', 'p', 'icomoon');
+@include icon('social', 'e', 'icomoon');
+@include icon('chat', 'm', 'icomoon');
+
+body {
+	background: #eeeeee;
+}
+
+// Navigation
+.g-navigation {
+	background: #eeeeee;
+
+	.x-tabbar {
+		background: #121212;
+	}
+
+	.x-button {
+		@include box-orient(vertical);
+		border: 0;
+		background: transparent;
+		margin: 5px 0 15px;
+		overflow: visible;
+	}
+
+	.x-button-label {
+		color: #939192;
+		font-size: 11px;
+	}
+
+	.x-button-icon {
+		height: 40px;
+		width: 70px;
+
+		&:before {
+			color: #3b3b3b;
+			font-size: 30px;
+		}
+
+		&.home {
+			margin-top: 10px;
+			height: 20px;
+			overflow: visible;
+		}
+	}
+
+	.x-tab-active {
+		.x-button-icon {
+			&:before {
+				color: #f7ab00;
+			}
+		}
+	}
+}
+
+// Sidebar
+.g-sidebar {
+	background: #262829;
+
+	.x-tabpanel {
+		background: #121212;
+	}
+
+	.x-tabbar {
+		background: #262829;
+		border: 0 !important;
+
+		.x-tab {
+			border: 0;
+			border-bottom: 1px solid transparent;
+			background: transparent;
+		}
+
+		.x-tab-active {
+			background: #121212;
+			border-bottom-color: #262829;
+
+			.x-button-icon {
+				&:before {
+					color: #ffffff;
+				}
+			}
+		}
+
+		.x-button-label {
+			display: none;
+		}
+
+		.x-button-icon {
+			display: block !important;
+			height: 40px;
+			width: 100%;
+
+			&:before {
+				font-size: 26px;
+				line-height: 40px;
+				color: #878787;
+			}
+		}
+	}
+
+	.x-dock-body {
+		overflow: visible;
+	}
+}
+
+.g-toggle-button {
+	width: 35px;
+	height: 35px;
+	border: 0;
+	background: #353638;
+	@include border-left-radius(5px);
+}
+
+.g-header {
+	padding: 10px;
+
+	img {
+		width: 40px;
+		height: 40px;
+		float: left;
+		margin-right: 10px;
+	}
+
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+		height: 20px;
+		color: rgb(226, 226, 226);
+	}
+
+	h4 {
+		font-size: 11px;
+		color: rgb(226, 226, 226);
+		line-height: 20px;
+		font-style: italic;
+		height: 20px;
+	}
+}
+
+// Social list
+.g-social-list {
+	.x-list-item {
+		border-bottom: 1px solid #262729;
+		padding: 10px;
+		color: #ccc;
+		line-height: 14px;
+		font-size: 11px;
+
+		img {
+			width: 30px;
+			height: 30px;
+			float: left;
+			margin-right: 10px;
+		}
+
+		.time {
+			margin-left: 40px;
+			margin-top: 5px;
+			color: #bababa;
+		}
+	}
+}
+
+// Content view
+.g-contentview {
+	
+}
+
+// Gridview
+.g-gridview {
+	.x-dataview-inner {
+		padding: 0 40px 10px;
+	}
+
+	.g-gridview-item {
+		float: left;
+		margin: 0 18px 18px 0;
+
+		img {
+			border: 1px solid #e5e5e5;
+			@include border-radius(3px);
+			width: 150px;
+			height: 150px;
+			margin-bottom: 10px;
+		}
+
+		.title {
+			color: #555;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+}
+
+// Titlebar
+.g-titlebar {
+	padding: 20px 40px;
+	min-height: 40px;
+	color: #109fb1;
+	font-family: gramble, 'helvetice neue', arial, sans-serif;
+	font-size: 25px;
+}
